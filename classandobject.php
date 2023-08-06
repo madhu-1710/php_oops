@@ -4,10 +4,12 @@ echo "<h2><u>Bike Details:</u></h2>";
 
 class MyBike{
     public $dream_bike="KTM RC390";
+
     public $brand="Bajaj";
     public $model="NS200";
     public $color="Red";
     public $prize="Rs.1,45,000/-";
+
     public function printBikeDetails(){
         $fav_bike="NS200";
         echo "My Favourite bike is $fav_bike.  And I have buy a $this->color color $this->model bike from $this->brand Showroom and it's prize is $this->prize";
@@ -18,6 +20,7 @@ class MyBike{
 
 $mybike = new MyBike();
 $mybike->printBikeDetails();
+
 echo "My Dream Bike : ".$mybike->dream_bike;
 echo"<br>";
 echo "My bike Color : ".$mybike->color;
@@ -40,6 +43,7 @@ class College{
     private $batch = "2017-2020";
 
     public $HOD ="Dr. Daniel Sweetline";
+ 
 
     public function printCollegeDetails(){
 
@@ -72,7 +76,93 @@ class Person{
 $madhu = new Person;
 $madhu->createPerson('Maddy');
 
+echo "<br>";
+echo "<br>";
+echo "<br>";
+echo "<br>";
 
+
+// --------------INHERITANCE-----------------//
+
+echo "<h2><u>Inheritance :</u></h2>";
+  
+class Text{
+    public function upperCase($text2){
+        echo "Uppercased Text => ".strtoupper($text2);
+    }
+}
+
+class Math extends Text{
+    public function ceilingNumber($number){
+        echo "Ceiled Number :".ceil($number);
+    }
+}
+
+class Count extends Math{
+    public function countCharacter($x){
+        echo "Character Count is "."<b>".strlen($x)."</b>";
+    }
+}
+
+ $text = "Welcome to Inheritance Concept!";
+ $text2 = "Habibi....Come to Dubai!!!";
+ $number = 6.4;
+ $x = "Welcome to Inheritance Concept!";
+
+$obj= new Text();
+$obj->upperCase($text);
+
+echo "<br>";
+echo "<br>";
+
+
+$obj = new Math();
+$obj->ceilingNumber($number);
+
+echo "<br>";
+echo "<br>";
+
+$obj = new Count();
+$obj->countCharacter($x);
+
+echo "<br>";
+echo "<br>";
+
+$inh = new Count();
+$inh->upperCase($text2);
+
+
+
+
+
+
+// --------------INHERITANCE-----------------//
+
+
+// class pet{
+
+//    public $food = "biscut";
+//     public $food2 = "meat";
+
+//     public function dog($food){
+//         $this ->food = $food;
+
+//         echo "Thank You User Your $food Very tasty";
+
+
+//     }
+
+//     public function Tiger($food2){
+//         $this ->food2=$food2;
+
+//         echo "Its very tasty $food2";
+//     }
+
+// }
+
+// $home = new pet();
+// $home ->dog($food);
+// $home ->tiger($food2);
 
 
 ?>
