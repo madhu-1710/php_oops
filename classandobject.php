@@ -1,5 +1,7 @@
 <?php
 
+echo "<h2><u>Bike Details:</u></h2>";
+
 class MyBike{
     public $dream_bike="KTM RC390";
     public $brand="Bajaj";
@@ -56,4 +58,21 @@ $myCollege->printCollegeDetails();
 // echo $myCollege->college;  //Try to use private property ($college)
 echo nl2br("\n");
 echo "My HOD Name is "."<b>".$myCollege->HOD."</b>";
+
+
+
+class Person{
+    public $name;
+    public function createPerson($name){
+        // $this->$name =$name;
+        echo $name;
+    }
+}
+
+$madhu = new Person;
+$madhu->createPerson('Maddy');
+
+
+
+
 ?>
