@@ -2,6 +2,8 @@
 
 echo "<h2><u>Bike Details:</u></h2>";
 
+//$myname = "MadhuBalan";
+
 class MyBike{
     public $dream_bike="KTM RC390";
 
@@ -131,6 +133,8 @@ echo "<br>";
 $inh = new Count();
 $inh->upperCase($text2);
 
+        echo "<br>";
+        echo "<br>";
 
 
 
@@ -139,30 +143,30 @@ $inh->upperCase($text2);
 // --------------INHERITANCE-----------------//
 
 
-// class pet{
+class pet{
 
-//    public $food = "biscut";
-//     public $food2 = "meat";
+   public $food;
+    public $food2;
 
-//     public function dog($food){
-//         $this ->food = $food;
+    public function dog($food){
+        $this ->food = $food;
 
-//         echo "Thank You User Your $food Very tasty";
+        echo "Thank You User Your $food Very tasty";
+        echo "<br>";
 
+    }
 
-//     }
+    public function Tiger($food2){
+        $this ->food2=$food2;
 
-//     public function Tiger($food2){
-//         $this ->food2=$food2;
+        echo "Its very tasty $food2";
+    }
 
-//         echo "Its very tasty $food2";
-//     }
+}
 
-// }
-
-// $home = new pet();
-// $home ->dog($food);
-// $home ->tiger($food2);
+$home = new pet();
+$home ->dog("biscut");
+$home ->tiger("meat");
 
 
 ?>
